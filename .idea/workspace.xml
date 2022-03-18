@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fdc737ab-1e93-45bd-bbcb-42d6ffc3c6d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wearable_backend/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/wearable_backend/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearable_backend/Procfile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
