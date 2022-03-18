@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #F08080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #CD5C5C;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: white;
+   text-align: center;
+
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a  href="#home">About</a></li>
+
+</ul>
+
+<br>
+<br>
+<h2 style="text-align:center">Wearable Simulator</h2>
+<p style="text-align:center">This portal simulates whole configurable eco-system of wearables.</p>
+
+<div class="container">
+  <form method="GET" action="{%url 'fetch-home' %}" >
+    <div class="row">
+      <div class="col-25">
+        <label for="wearables">Number of Wearables to simulate:</label>
+      </div>
+      <div class="col-75">
+        <select type="number" id="wearables" name="wearables" >
+         <option value="1">1 Wearable</option>
+          <option value="10" selected>10 Wearables</option>
+          <option value="100">100 Wearables</option>
+          <option value="500">500 Wearables</option>
+          <option value="1000">1000 Wearables</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="Batch_Frequency">Set Batch Frequency:</label>
+      </div>
+      <div class="col-75">
+        <select type="number" id="Batch_Frequency" name="Batch_Frequency" >
+          <option value="2" selected>2 seconds</option>
+
+            <option value="30" selected>30 seconds</option>
+          <option value="60">1 Minute</option>
+          <option value="300">5 Minutes</option>
+          <option value="600">10 Minutes</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <div class="row">
+      <div class="col-25">
+        <label for="HRFrequency">Set Frequency of Heart Rate sensor:</label>
+      </div>
+      <div class="col-75">
+        <select type="HRFrequency" id="HRFrequency" name="HRFrequency" >
+         <option value="1" selected>1 seconds</option>
+          <option value="3" >3 seconds</option>
+          <option value="5">5 seconds</option>
+          <option value="10">10 seconds</option>
+          <option value="30">30 seconds</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="TemperatureFrequency">Set Frequency of Temperature Sensor:</label>
+      </div>
+      <div class="col-75">
+        <select type="number" id="TemperatureFrequency" name="TemperatureFrequency" >
+         <option value="1">1 seconds</option>
+          <option value="3" >3 seconds</option>
+          <option value="5" selected>5 seconds</option>
+          <option value="10">10 seconds</option>
+          <option value="30">30 seconds</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="HRVFrequency">Set Frequency of HRV Sensor:</label>
+      </div>
+      <div class="col-75">
+        <select type="number" id="HRVFrequency" name="HRVFrequency" >
+         <option value="1">1 seconds</option>
+          <option value="3" selected>3 seconds</option>
+          <option value="5">5 seconds</option>
+          <option value="10">10 seconds</option>
+          <option value="30">30 seconds</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div style="color:yellow; text-align:center;" class="row">
+      <input  type="submit" value="Save Configuration">
+    </div>
+  </form>
+
+    <br>
+    <div  style="color:yellow; text-align:center;" class="row">
+
+        <a   id="Goodbye" onclick="showDiv()" href="{%url 'publish-home'%}" style="background-color: #F08080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;" > Create and Publish Data  </a>
+    </div>
+
+</div>
+
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+</body>
+
+
+<script>
+    function showDiv() {
+   document.getElementById('Goodbye').textContent = "Publishing Data";
+}
+
+</script>
+</html>
