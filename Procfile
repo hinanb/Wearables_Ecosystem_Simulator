@@ -1,1 +1,1 @@
-web:gunicorn wearable_backend.wsgi
+web: gunicorn wearable_backend.wsgi
