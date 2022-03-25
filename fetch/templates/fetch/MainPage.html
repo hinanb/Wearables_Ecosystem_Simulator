@@ -1,9 +1,11 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{% static 'fetch/images/favicon.png'%}">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 ul {
   list-style-type: none;
@@ -140,8 +142,9 @@ input[type=submit]:hover {
 
 <br>
 <br>
-<h2 style="text-align:center">Wearable Simulator</h2>
+<h2 style="text-align:center"><image style="height:20px;width:20px;" rel="shortcut icon" src="{% static 'fetch/images/favicon.png'%}">Wearable Simulator</h2>
 <p style="text-align:center">This portal simulates whole configurable eco-system of wearables.</p>
+
 
 <div class="container">
   <form method="GET" action="{%url 'fetch-home' %}" >
