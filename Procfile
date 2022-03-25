@@ -1,1 +1,1 @@
-web: gunicorn wearable_backend.wsgi
+web: gunicorn wearable_backend.wsgi:application -w 2 -b :8000 --timeout 500
