@@ -20,7 +20,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 import random
 
-
+import os
 # Create your views here.
 
 def create_Dataset():
@@ -157,7 +157,8 @@ def send_batch(batch, client, df):
     try:
         input1 = json.dumps(batch)
         client.publish('Wearabllll', payload=input1)
-        print(input1)
+        #print(input1)
+        print(os.getpid())
     except:
         print('failed sending')
 
