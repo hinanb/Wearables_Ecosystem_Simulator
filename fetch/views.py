@@ -21,6 +21,8 @@ from django.http import HttpResponse
 import random
 
 import os
+import psutil
+
 # Create your views here.
 
 def create_Dataset():
@@ -243,7 +245,15 @@ def index(request):
 
 
 def index__(request):
+    #deleting all the running simulations as we will be starting off with new simulation
+
+    process_pid = os.getpid()
+    p = psutil.Process(process_pid)
+    p.terminate()
+
+
     # simulator dataset
+
 
     client = mqtt.Client('Heart Rate_Device1')
     client.on_connect = on_connect
