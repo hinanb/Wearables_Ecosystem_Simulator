@@ -21,10 +21,10 @@ from django.conf.urls import (
 handler400, handler403, handler404, handler500
 )
 
-#handler400 = 'fetch.views.bad_request'
-#handler403 = 'fetch.views.permission_denied'
+handler400 = 'fetch.views.bad_request'
+handler403 = 'fetch.views.permission_denied'
 handler404 = 'fetch.views.page_not_found'
-#handler500 = 'fetch.views.server_error'
+handler500 = 'fetch.views.server_error'
 
 
 urlpatterns = [
