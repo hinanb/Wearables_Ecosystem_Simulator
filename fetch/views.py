@@ -25,6 +25,28 @@ import psutil
 
 # Create your views here.
 
+from django.template import RequestContext
+
+# HTTP Error 400
+def bad_request(request, exception):
+        return HttpResponse('bad_request')
+
+
+# HTTP Error 400
+def permission_denied(request, exception):
+        return HttpResponse('<h1>permission_denied</h1>')
+
+
+# HTTP Error 400
+def page_not_found(request, exception):
+        return HttpResponse('<h1>page_not_found</h1>')
+
+
+# HTTP Error 400
+def server_error(request, exception):
+        return HttpResponse('<h1>server_error</h1>')
+
+
 def create_Dataset():
     # HR per min
     mean_list_asc = [70, 73, 76, 75, 73, 80, 78, 77, 75, 76]

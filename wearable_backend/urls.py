@@ -17,6 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from fetch import views as fetchviews
 
+from django.conf.urls import (
+handler400, handler403, handler404, handler500
+)
+
+#handler400 = 'fetch.views.bad_request'
+#handler403 = 'fetch.views.permission_denied'
+handler404 = 'fetch.views.page_not_found'
+#handler500 = 'fetch.views.server_error'
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fetchviews.index, name='fetch-home'),
