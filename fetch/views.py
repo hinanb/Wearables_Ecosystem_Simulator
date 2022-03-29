@@ -160,7 +160,7 @@ def send_batch(batch, client, df):
         input1 = json.dumps(batch)
         client.publish('Wearabllll', payload=input1)
         #print(input1)
-        print(os.getpid())
+        #print(os.getpid())
     except:
         print('failed sending')
 
@@ -247,9 +247,9 @@ def index(request):
 def index__(request):
     #deleting all the running simulations as we will be starting off with new simulation
 
-    process_pid = os.getpid()
-    p = psutil.Process(process_pid)
-    p.terminate()
+    #process_pid = os.getpid()
+    #p = psutil.Process(process_pid)
+    #p.terminate()
 
 
     # simulator dataset
@@ -267,7 +267,8 @@ def index__(request):
     sensorFrequency['HRV'] = conf_obj.HRVFrequency
     sensorFrequency['Temerature'] = conf_obj.TemperatureFrequency
     sensorFrequency['steps'] = 1
-
+    time.sleep(5)
+    print(conf_obj)
 
     Batch_Frequency=conf_obj.BatchFrequency
     wearablesvar= conf_obj.numberOfWearables

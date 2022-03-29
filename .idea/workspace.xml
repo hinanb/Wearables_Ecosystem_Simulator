@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdc737ab-1e93-45bd-bbcb-42d6ffc3c6d3" name="Changes" comment="" />
+    <list default="true" id="fdc737ab-1e93-45bd-bbcb-42d6ffc3c6d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetch/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/migrations/0002_configuration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/migrations/0003_alter_configuration_hrfrequency_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/migrations/0004_configuration_batchfrequency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetch/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearable_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wearable_backend/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

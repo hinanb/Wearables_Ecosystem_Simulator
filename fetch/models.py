@@ -1,7 +1,12 @@
 from django.db import models
 
 # Create your models here.
+'''
+from django.contrib.auth.models import AbstractUser
 
+class User(AbstractUser):
+    pass
+'''
 
 class Wearable(models.Model):
     user_name = models.CharField(max_length=200, primary_key=True)
