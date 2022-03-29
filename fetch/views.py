@@ -47,6 +47,11 @@ def server_error(request, exception):
         return HttpResponse('<h1>server_error</h1>')
 
 
+def time_out(request, exception):
+    return HttpResponse('<h1>time out</h1>')
+
+
+
 def create_Dataset():
     # HR per min
     mean_list_asc = [70, 73, 76, 75, 73, 80, 78, 77, 75, 76]
