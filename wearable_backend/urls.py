@@ -26,7 +26,7 @@ handler403 = 'fetch.views.permission_denied'
 handler404 = 'fetch.views.page_not_found'
 handler500 = 'fetch.views.server_error'
 handler504 = 'fetch.views.time_out'
-
+handler503 = 'fetch.views.overloaded'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

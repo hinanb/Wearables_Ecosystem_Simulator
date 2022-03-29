@@ -50,6 +50,8 @@ def server_error(request, exception):
 def time_out(request, exception):
     return HttpResponse('<h1>time out</h1>')
 
+def overloaded(request, exception):
+    return HttpResponse('<h1>overloaded</h1>')
 
 
 def create_Dataset():
